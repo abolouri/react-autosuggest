@@ -95,6 +95,7 @@ export default class Autosuggest extends Component {
     highlightFirstSuggestion: PropTypes.bool,
     theme: PropTypes.object,
     id: PropTypes.string,
+    containerProps: PropTypes.object
   };
 
   static defaultProps = {
@@ -558,6 +559,7 @@ export default class Autosuggest extends Component {
       getSuggestionValue,
       alwaysRenderSuggestions,
       highlightFirstSuggestion,
+      containerProps,
     } = this.props;
     const {
       isFocused,
@@ -807,6 +809,7 @@ export default class Autosuggest extends Component {
         highlightedSectionIndex={highlightedSectionIndex}
         highlightedItemIndex={highlightedSuggestionIndex}
         inputProps={autowhateverInputProps}
+        containerProps={containerProps}
         itemProps={this.itemProps}
         theme={mapToAutowhateverTheme(theme)}
         id={id}
